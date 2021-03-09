@@ -1,0 +1,23 @@
+.page {
+  height: 100%;
+  min-width: 320px;
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: $main-text;
+  background-color: $page-background;
+}
+
+.page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  margin: 0 auto;
+  background-color: $body-background;
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+  }
+}

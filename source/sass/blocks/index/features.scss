@@ -1,0 +1,18 @@
+.features__list {
+  display: grid;
+  padding: 0 20px;
+  background-color: $background-light;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+
+  .feature-item:not(:last-child) {
+    border-bottom: 1px solid $decoration-line-dark;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+    }
+  }
+}

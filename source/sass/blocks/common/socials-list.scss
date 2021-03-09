@@ -1,0 +1,39 @@
+.socials-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socials-list__item {
+  margin: 0 3px;
+}
+
+.socials-list__link {
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 48px;
+  background: $button-background;
+
+  &:hover {
+    background-color: $button-background--hover;
+  }
+
+  &:active {
+    background-color: $button-background--active;
+  }
+
+  &:active .socials-list__icon {
+    fill: $button-text--active;
+  }
+}
+
+.socials-list__icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  fill: $icon-light;
+}

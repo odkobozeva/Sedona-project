@@ -1,0 +1,131 @@
+.feature-item {
+  padding: 25px 12px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 42px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 42px 33px 62px;
+  }
+
+  &--highlight {
+    padding: 38px 15px 36px;
+    background-color: $background-highlight;
+
+    @media (min-width: $tablet-width) {
+      padding: 42px 30px 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 52px 85px;
+    }
+  }
+
+  &--decorate {
+    position: relative;
+    padding: 71px 13px 39px;
+
+    @media (min-width: $tablet-width) {
+      padding: 40px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 48px 55px;
+    }
+  }
+
+  &--decorate::before {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 37px;
+      width: 100%;
+      background-image: url("../img/banner-decorate.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 37px;
+    }
+  }
+}
+
+.feature-item__title {
+  margin: 0 0 12px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  &--light-text {
+    color: $light-text;
+  }
+
+  br {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+}
+
+.feature-item__number {
+  position: relative;
+  line-height: 1.5;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 1px;
+    top: 3px;
+    bottom: 0;
+    margin: auto;
+    background-color: $secondary-text;
+  }
+
+  &::before {
+    left: -13px;
+  }
+
+  &::after {
+    right: -13px;
+  }
+
+  &--light-text {
+    color: $light-text;
+  }
+
+  &--light-text::before,
+  &--light-text::after {
+    background-color: $light-text;
+  }
+}
+
+.feature-item__description {
+  margin: 17px 0 0;
+  line-height: 1.5;
+  color: $secondary-text;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+  }
+
+  &--light-text {
+    color: $light-text;
+  }
+
+  br {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+}

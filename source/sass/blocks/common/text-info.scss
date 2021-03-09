@@ -1,0 +1,15 @@
+.text-info {
+  text-align: center;
+}
+
+.text-info__title {
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.text-info__description {
+  margin: 0;
+  color: $secondary-text;
+  text-transform: uppercase;
+}

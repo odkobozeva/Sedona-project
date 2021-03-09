@@ -1,0 +1,110 @@
+.popup-reviews {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  background-color: $body-background;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  z-index: 2;
+
+  &--error {
+    max-width: 400px;
+  }
+
+  &--success {
+    max-width: 640px;
+  }
+}
+
+.popup-reviews__title {
+  margin: 0;
+  padding-top: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.44;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  br {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+}
+
+.popup-reviews__description {
+  margin: 0;
+  padding: 30px 41px 24px;
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 41px 37px;
+  }
+}
+
+.popup-reviews__button-wrapper {
+  &--success {
+    margin-top: 17px;
+    padding: 20px;
+    background-color: $page-background;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 10px;
+      padding: 44px 92px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 6px;
+    }
+  }
+
+  &--error {
+    padding: 0 70px 36px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 65px 49px;
+    }
+  }
+}
+
+.popup-reviews__button {
+  width: 100%;
+  padding: 18px 10px 14px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.44;
+  color: $light-text;
+  background-color: $button-background;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  &:hover {
+    background-color: $button-background--hover;
+  }
+
+  &:active {
+    color: $button-text--active;
+    background-color: $button-background--active;
+  }
+
+  &:disabled {
+    background-color: $button-background--disabled;
+    cursor: default;
+  }
+}

@@ -1,0 +1,75 @@
+.checkbox-field__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + .checkbox-field__label::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 20px;
+    height: 12px;
+    border-left: 3px solid $input--checked;
+    border-bottom: 3px solid $input--checked;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+
+  &:checked + .checkbox-field__label:active::after {
+    border-color: $input--disabled;
+  }
+
+  &:disabled + .checkbox-field__label {
+    cursor: default;
+  }
+
+  &:disabled + .checkbox-field__label::before {
+    background-color: $input--active;
+  }
+
+  &:focus + .checkbox-field__label {
+    outline: 1px auto;
+  }
+}
+
+.checkbox-field__label {
+  position: relative;
+  display: flex;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.86;
+  align-items: center;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    margin-right: 22px;
+    background-color: $input-background;
+    border-radius: 5px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 25px;
+    }
+  }
+
+  &:hover::before {
+    background-color: $input--hover;
+  }
+
+  &:active::before {
+    background-color: $input--active;
+  }
+}

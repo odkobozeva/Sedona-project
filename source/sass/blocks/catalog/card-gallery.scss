@@ -1,0 +1,115 @@
+.card-gallery__link {
+  position: relative;
+  display: block;
+  min-height: 280px;
+  padding-bottom: 56%;
+  background-color: $catalog-image-background;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    min-height: 267px;
+    padding-bottom: 80%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 66.75%;
+  }
+
+  &--wide {
+    @media (min-width: $tablet-width) {
+      padding-bottom: 61.73%;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 33.33%;
+    }
+  }
+}
+
+.card-gallery__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-gallery__info {
+  padding-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    padding: 17px 20px;
+    background-color: $card-gallery-background-light;
+    grid-template-columns: auto minmax(65px, max-content);
+    gap: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    background-color: $card-gallery-background-dark;
+  }
+}
+
+.card-gallery__wrapper {
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 10px;
+  }
+}
+
+.card-gallery__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 23px;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    color: $light-text;
+  }
+}
+
+.card-gallery__author {
+  margin: 0;
+  font-size: 14px;
+  line-height: 23px;
+  color: $secondary-text;
+
+  @media (min-width: $desktop-width) {
+    color: $light-text;
+  }
+}
+
+.card-gallery__button {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    color: $light-text;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.card-gallery__icon {
+  margin-right: 10px;
+  fill: $icon-dark-opacity;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    fill: $icon-light;
+  }
+}

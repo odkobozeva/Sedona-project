@@ -1,0 +1,27 @@
+.copyright__link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.86;
+  text-transform: uppercase;
+
+  &:hover .copyright__logo {
+    fill: $icon-color;
+  }
+
+  &:active .copyright__logo {
+    fill: $icon-dark-opacity;
+  }
+}
+
+.copyright__text {
+  margin: 0 12px 0 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 13px;
+  }
+}
+
+.copyright__logo {
+  fill: $icon-dark;
+}

@@ -1,0 +1,26 @@
+.feature-info {
+  padding: 31px 25px 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 44px 100px 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 56px 100px 43px;
+  }
+}
+
+.feature-info__title {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+}
+
+.feature-info__description {
+  line-height: 1.8;
+}

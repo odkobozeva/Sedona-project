@@ -1,0 +1,349 @@
+.reviews {
+  @media (min-width: $tablet-width) {
+    max-width: calc(100% - 120px);
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: calc(100% - 240px);
+  }
+}
+
+.reviews__info {
+  padding: 35px 20px 17px;
+  border-bottom: 1px solid $decoration-line;
+
+  @media (min-width: $tablet-width) {
+    padding: 62px 40px 67px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 111px 40px 40px;
+  }
+
+  br {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+}
+
+.reviews__title {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.4;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+    font-size: 30px;
+    line-height: 0.87;
+  }
+}
+
+.reviews__description {
+  line-height: 1.75;
+  color: $secondary-text;
+
+  @media (min-width: $tablet-width) {
+    line-height: 1.71;
+  }
+}
+
+.reviews__form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.reviews__fieldset {
+  margin: 0;
+  border: none;
+  padding: 0;
+
+  &:not(:last-of-type) {
+    @media (max-width: $mobile-width-only) {
+      border-bottom: 1px solid $decoration-line;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 20px;
+  }
+
+  &--impression {
+    @media (min-width: $tablet-width) {
+      order: -1;
+      margin-bottom: 50px;
+      padding-right: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 4px;
+    }
+  }
+
+  &--username {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 50px;
+      padding-left: 56px;
+      border-left: 1px solid $decoration-line-dark;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 80px;
+    }
+  }
+
+  &--horizontal {
+    @media (min-width: $tablet-width) {
+      position: relative;
+      grid-column: 1 / -1;
+    }
+
+    &::before,
+    &::after {
+      @media (min-width: $tablet-width) {
+        content: "";
+        position: absolute;
+        top: 30px;
+        width: 124px;
+        height: 1px;
+        background-color: $decoration-line-dark;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 280px;
+      }
+    }
+
+    &::after {
+      @media (min-width: $tablet-width) {
+        right: 0;
+      }
+    }
+  }
+
+  &--checklist {
+    @media (min-width: $tablet-width) {
+      position: relative;
+      grid-column: 1 / -1;
+      margin-bottom: 20px;
+    }
+
+    &::before,
+    &::after {
+      @media (min-width: $tablet-width) {
+        content: "";
+        position: absolute;
+        width: 124px;
+        height: 1px;
+        top: 45px;
+        background-color: $decoration-line-dark;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 280px;
+      }
+    }
+
+    &::after {
+      @media (min-width: $tablet-width) {
+        right: 0;
+      }
+    }
+  }
+}
+
+.reviews__fields-list {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 20px 0 26px;
+  }
+
+  &--contacts {
+    gap: 13px;
+    padding: 17px 0 25px;
+
+    @media (min-width: $tablet-width) {
+      gap: 23px;
+      padding: 70px 0 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 0;
+      padding: 120px 0 30px;
+    }
+  }
+
+  &--username {
+    @media (min-width: $tablet-width) {
+      padding: 54px 0 0;
+    }
+  }
+
+  &--radiobutton {
+    gap: 14px;
+    padding: 21px 0 26px;
+
+    @media (min-width: $tablet-width) {
+      gap: 23px;
+      padding: 55px 0 0;
+    }
+  }
+
+  &--checklist {
+    gap: 24px;
+    padding: 21px 0 25px;
+
+    @media (min-width: $tablet-width) {
+      grid-template-columns: repeat(2, minmax(180px, max-content));
+      gap: 32px 68px;
+      padding: 114px 0 30px;
+      justify-content: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 30px;
+      grid-template-columns: repeat(4, auto);
+      justify-content: space-between;
+    }
+  }
+}
+
+.reviews__field {
+  display: grid;
+  align-items: center;
+
+  &--username {
+    grid-template-columns: min-content auto;
+    gap: 15px;
+  }
+
+  &--contacts {
+    gap: 8px;
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: min-content auto;
+      gap: 16px;
+    }
+  }
+
+  &--contacts:nth-child(odd) {
+    @media (min-width: $desktop-width) {
+      margin-right: 80px;
+    }
+  }
+}
+
+.reviews__textarea-field {
+  padding-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 105px;
+  }
+}
+
+.reviews__legend {
+  width: 100%;
+  padding: 20px 0 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  &--checklist {
+    @media (max-width: $mobile-width-only) {
+      padding: 16px 0 0;
+    }
+  }
+
+  &--left {
+    @media (min-width: $tablet-width) {
+      text-align: left;
+    }
+  }
+
+  &--decorate {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+    }
+  }
+}
+
+.reviews__data-processing {
+  grid-column: 1 / -1;
+  padding: 53px 20px 39px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    padding: 55px 0 60px;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 53px 0 66px;
+  }
+}
+
+.reviews__button {
+  padding: 18px 10px 14px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.24;
+  color: $light-text;
+  background-color: $button-background;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $button-background--hover;
+  }
+
+  &:active {
+    color: $button-text--active;
+    background-color: $button-background--active;
+  }
+
+  &:disabled {
+    background-color: $button-background--disabled;
+    cursor: default;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    padding: 18px 60px 14px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 18px 60px 14px;
+  }
+}
+
+.reviews__notice {
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width-only) {
+    visibility: hidden;
+  }
+}
